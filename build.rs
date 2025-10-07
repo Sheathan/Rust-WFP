@@ -1,4 +1,8 @@
 fn main() {
+    if !cfg!(target_os = "windows") {
+        return;
+    }
+
     let mut res = winres::WindowsResource::new();
     res.set_manifest(
         r#"
