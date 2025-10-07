@@ -1,0 +1,21 @@
+[package]
+name = "sls_wfp_gui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+thiserror = "1"
+uuid = { version = "1", features = ["v4"] }
+widestring = "1"
+eframe = "0.27"      # GUI
+egui = "0.27"
+windows = { version = "0.58", features = [
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_NetworkManagement_WindowsFilteringPlatform",  # fwpmu.h
+  "Wdk_NetworkManagement_WindowsFilteringPlatform"     # fwpmk.h (optional)
+]}
+
+[build-dependencies]
+winres = "0.1"
