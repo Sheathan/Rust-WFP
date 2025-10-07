@@ -19,4 +19,5 @@ fn main() {
 </assembly>"#,
     );
     res.compile().expect("failed to embed Windows application manifest");
+    res.compile().unwrap();
 }
